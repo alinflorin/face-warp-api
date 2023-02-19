@@ -1,14 +1,13 @@
 import express from "express";
-import { readBody } from "./read-body";
 import { FaceMesh } from "@mediapipe/face_mesh";
-// import { } from "@tensorflow/tfjs-node";
+import bodyParser from 'body-parser';
 
 const app = express();
-app.use(express.json());
+app.use(bodyParser.raw({ type: "video/mp4", limit: "250mb" }));
 
 
 app.post(`/api/warp`, async (req, res) => {
-  const videoBuffer = await readBody(req);
+  const videoBuffer = req.body;
   res.writeHead(200, {
     "Content-Disposition": "attachment; filename=" + `result.mp4`,
     "Content-Type": "application/octet-stream",
