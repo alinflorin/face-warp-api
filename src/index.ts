@@ -41,6 +41,7 @@ import { PassThrough } from "stream";
         });
       } catch (err) {
         res.status(500).send("Error!");
+        console.error(err);
       }
     });
 
