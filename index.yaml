@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  face-warp-api:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-02-22T19:19:58.548813325Z"
+    description: A Helm chart for Kubernetes
+    digest: bdd2b07788bafbaedead58c8319f8c79f47d6f6a4880982cbb16d5f5476315e2
+    name: face-warp-api
+    type: application
+    urls:
+    - https://alinflorin.github.io/face-warp-api/face-warp-api-1.0.0.tgz
+    version: 1.0.0
+generated: "2023-02-22T19:19:58.547845906Z"
